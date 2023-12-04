@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Christmas Trivia 2023</title>
+</head>
+<body>
+
+<h1>Christmas Trivia 2023</h1>
+<p id="my-name">Josue C.</p>
+
+<button id="start-button">START</button>
+
+
+
+<div id="stage-one"><!--Don't use this, it has JS attached. Main Container you can use.-->
+<div id="main-container">
+
+
+
+<div id="display-container">
+
+
+<img src="https://content.mycutegraphics.com/graphics/christmas/santa-claus.png" alt="santa-image" id="santa-clipart">
+<p id="speech-bubble"></p>
+
+</div>
+
+<div id="progress-bar">
+    <div id = "uno" class="empty-bar"></div>
+    <div id = "dos" class="empty-bar"></div>
+    <div id = "tres" class="empty-bar"></div>
+    <div id = "cuatro" class="empty-bar"></div>
+    <div id = "cinco" class="empty-bar"></div>
+    <div id = "seis" class="empty-bar"></div>
+    <div id = "siete" class="empty-bar"></div>
+    <div id = "ocho" class="empty-bar"></div>
+    <div id = "nueve" class="empty-bar"></div>
+    <div id = "diez" class="empty-bar"></div>
+</div>
+
+<input type="text" id="name-input" placeholder="Type Your Name..." autocomplete="off"/>
+
+<button id="continue-button">NEXT</button>
+
+<div id="stage-two"> <!--stage 2 start-->
+    <div id="main-container-two">
+    
+    <h2 id="question-counter">QUESTION #0</h2>
+
+    <div id="stage-two-non-title">
+    <p>Select one of the following options:</p>
+    <div id="answer-container">
+    <button id="answer-a">Answer A</button>
+    <button id="answer-b">Answer B</button>
+    <button id="answer-c">Answer C</button>
+    <button id="answer-d">Answer D</button>
+    </div>
+    </div>
+    
+    
+    </div>
+</div> <!--stage 2 ends-->
+
+<div id="restart-div">
+    <button id="restart-button">RESTART</button>
+</div>
+</div>
+</div><!--The end of the stage-one container-->
+
+
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

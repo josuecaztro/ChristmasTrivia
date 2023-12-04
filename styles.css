@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #a02626, #239954);
+    color: lightgray;
+    gap: 5px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: rgb(255, 58, 58);
+    text-shadow: 2px 2px rgb(147, 0, 0);
+    margin-bottom: 0px;
+}
+
+button {
+    background: linear-gradient(to left, #a02626, #239954);
+    padding: 15px 50px;
+    border: 2px solid lightgreen;
+    border-radius: 7.5px;
+    box-shadow: 2.5px 2.5px 5px black;
+    color: lightgreen;
+}
+
+button:hover {
+    background: linear-gradient(to left, #d33333, #30d173);
+    color: rgb(172, 255, 172);
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#display-container {
+    display: flex;
+    background-color: rgb(28, 61, 28);
+    justify-content: center;
+    align-items: center;
+    border: 10px groove darkred;
+    box-shadow: 2.5px 2.5px 5px black;
+    padding: 25px;
+    gap: 10px;
+}
+
+#santa-clipart {
+    height: 175px;
+    width: auto;
+}
+
+#santa-clipart:hover {
+    transition: transform 0.2s ease;
+    transform: rotate(-2.5deg);
+}
+
+#my-name {
+    font-weight: 200px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: rgb(0, 149, 0);
+    text-shadow: 2px 2px rgb(11, 44, 6);
+}
+
+#speech-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family:Tahoma, sans-serif;
+    height: auto;
+    width: 200px;
+    padding: 15px 35px;
+    background-color: rgb(164, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 7.5px black;
+    text-align: center;
+    white-space: pre-line;
+}
+
+#side-speech-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family:Tahoma, sans-serif;
+    height: auto;
+    width: 100px;
+    padding: 5px 20px;
+    background-color: rgb(164, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 7.5px black;
+    text-align: center;
+    white-space: pre-line;
+}
+
+#continue-button {
+    padding: 5px 10px;
+    width: 125px;
+    text-align: center;
+}
+
+#main-container-two {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 61, 28);
+    justify-content: center;
+    align-items: center;
+    border: 10px groove darkred;
+    box-shadow: 2.5px 2.5px 5px black;
+    gap: 10px;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+#answer-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+#restart-div {
+    display: none;
+    margin-top: 50px;
+    justify-self: flex-end;
+    align-items: center;
+}
+
+#restart-button {
+    background: none;
+    background-color: darkred;
+    border: 2px solid black;
+    border-radius: 7.5px;
+    box-shadow: 2.5px 2.5px 5px black;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    max-width: 150px;
+}
+
+#restart-button:hover {
+    background: none;
+    background-color: rgb(198, 0, 0);
+}
+
+.selected {
+    border: 2px solid yellow;
+    background: none;
+    background-color: darkgoldenrod;
+    color: yellow;
+}
+
+.selected:hover {
+    background: none;
+    background-color: darkgoldenrod;
+    color: yellow;
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+#progress-bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.empty-bar {
+    height: 20px;
+    width: 20px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+#question-counter {
+    margin-bottom: 0px;
+}
+
+#name-input {
+    display: none;
+    background: linear-gradient(to left, #a02626, #239954);
+    padding: 5px 15px;
+    border-radius: 7.5px;
+    color: whitesmoke;
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+#name-input::placeholder {
+    color:whitesmoke;
+}
