@@ -337,13 +337,27 @@ if (correctAnswers.includes(chosenAnswer)){
 
 //Gives Final Message on Speech Bubble
 function generateFinalMessage (){
-    if (correctCounter >= 7){
-    speechBubble.textContent = "You made it! You got " + correctCounter + " questions right!";
-    restartButton.textContent = "PLAY AGAIN";
-} else {
-    speechBubble.textContent = "You Lost! You got " + (10 - correctCounter) + " questions wrong!";
-    restartButton.textContent = "TRY AGAIN";
-}};
+    if (correctCounter === 10){
+        speechBubble.textContent = `100%? Did you cheat?! That's impressive! Good job, ${userName}!`
+        restartButton.textContent = "PLAY AGAIN";
+    } else if (correctCounter === 9 || correctCounter === 8){
+        speechBubble.textContent = "Wow, good job. You got " + correctCounter + " questions right!";
+        restartButton.textContent = "PLAY AGAIN";
+    } else if (correctCounter === 7){
+        speechBubble.textContent = "You just barely passed! You got seven questions right, nice!";
+        restartButton.textContent = "PLAY AGAIN";
+    } else if (correctCounter > 2 && correctCounter < 7){
+        speechBubble.textContent = "You Lost! You got " + (10 - correctCounter) + " questions wrong!";
+        restartButton.textContent = "TRY AGAIN";
+    } else if (correctCounter <= 2){
+        speechBubble.textContent = "Wow, you are AWFUL at Christmas. How did you get " + (10 - correctCounter) + " questions wrong?!";
+        restartButton.textContent = "TRY AGAIN";
+    }
+};
+
+
+
+
 
 //generates message for Stage 2 based off Score
 function generateStageTwoFinalMessage (){
