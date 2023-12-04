@@ -25,6 +25,7 @@ const progress9 = document.querySelector("#nueve");
 const progress10 = document.querySelector("#diez");
 const stageTwoDelete = document.querySelector("#stage-two-non-title");
 const nameInput = document.querySelector("#name-input");
+const rightClasses = document.querySelector(".right-reveal");
 
 //Any Trackers or Counters
 let clicks = 0;
@@ -231,73 +232,73 @@ function updateProgressBar (){
     if (askedQuestions === 2){
         progress1.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress1.style.backgroundColor = "green";
+            progress1.classList.add("right-reveal");
         } else {
-            progress1.style.backgroundColor = "red";
+            progress1.classList.add("wrong-reveal");
         }
     }
     if (askedQuestions === 3){
         progress2.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress2.style.backgroundColor = "green";
+            progress2.classList.add("right-reveal");
         } else {
-            progress2.style.backgroundColor = "red";
+            progress2.classList.add("wrong-reveal");
         }
     }
     if (askedQuestions === 4){
         progress3.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress3.style.backgroundColor = "green";
+            progress3.classList.add("right-reveal")
         } else {
-            progress3.style.backgroundColor = "red";
+            progress3.classList.add("wrong-reveal");
         }
     }
     if (askedQuestions === 5){
         progress4.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress4.style.backgroundColor = "green";
+            progress4.classList.add("right-reveal")
         } else {
-            progress4.style.backgroundColor = "red";
+            progress4.classList.add("wrong-reveal")
         }
     }
     if (askedQuestions === 6){
         progress5.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress5.style.backgroundColor = "green";
+            progress5.classList.add("right-reveal")
         } else {
-            progress5.style.backgroundColor = "red";
+            progress5.classList.add("wrong-reveal")
         }
     }
     if (askedQuestions === 7){
         progress6.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress6.style.backgroundColor = "green";
+            progress6.classList.add("right-reveal")
         } else {
-            progress6.style.backgroundColor = "red";
+            progress6.classList.add("wrong-reveal")
         }
     }
     if (askedQuestions === 8){
         progress7.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress7.style.backgroundColor = "green";
+            progress7.classList.add("right-reveal")
         } else {
-            progress7.style.backgroundColor = "red";
+            progress7.classList.add("wrong-reveal")
         }
     }
     if (askedQuestions === 9){
         progress8.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress8.style.backgroundColor = "green";
+            progress8.classList.add("right-reveal")
         } else {
-            progress8.style.backgroundColor = "red";
+            progress8.classList.add("wrong-reveal")
         }
     }
     if (askedQuestions === 10 && selected === 0){
         progress9.style.transition = "background-color 0.5s ease";
         if (correctAnswers.includes(chosenAnswer)){
-            progress9.style.backgroundColor = "green";
+            progress9.classList.add("right-reveal")
         } else {
-            progress9.style.backgroundColor = "red";
+            progress9.classList.add("wrong-reveal")
         }
     }
 }
@@ -306,16 +307,17 @@ function updateProgressBar (){
 function generateEnding (){
     if (askedQuestions === 10 && selected === 1){
         if (correctAnswers.includes(chosenAnswer)){
-            progress10.style.backgroundColor = "green";
+            progress10.classList.add("right-reveal")
         } else {
-            progress10.style.backgroundColor = "red";
+            progress10.classList.add("wrong-reveal")
         }
         generateScore();
         progressBar.style.display = "flex";
+        progress10.style.transition = "background-color 0.5s ease";
         generateStageTwoFinalMessage();
         generateFinalMessage();
         continueButton.style.display = "none";
-        progress10.style.transition = "background-color 0.5s ease";
+        revealFinalProgress();
     }
 }
 
@@ -349,3 +351,58 @@ function generateStageTwoFinalMessage (){
     questionCounter.textContent = `${userName}'s Score: ` + (correctCounter * 10) + `%`;
     questionCounter.style.paddingBottom = "20px";
 };
+
+/* this is stupid i know theres any easier way to do this 
+rather than right all this dumbass code */
+function revealFinalProgress(){
+    if (progress1.classList.contains("right-reveal")){
+            progress1.style.backgroundColor = "green";
+        } else {
+            progress1.style.backgroundColor = "red";
+        }
+    if (progress2.classList.contains("right-reveal")){
+            progress2.style.backgroundColor = "green";
+        } else {
+            progress2.style.backgroundColor = "red";
+        }
+    if (progress3.classList.contains("right-reveal")){
+            progress3.style.backgroundColor = "green";
+        } else {
+            progress3.style.backgroundColor = "red";
+        }
+    if (progress4.classList.contains("right-reveal")){
+            progress4.style.backgroundColor = "green";
+        } else {
+            progress4.style.backgroundColor = "red";
+        }
+    if (progress5.classList.contains("right-reveal")){
+            progress5.style.backgroundColor = "green";
+        } else {
+            progress5.style.backgroundColor = "red";
+        }
+    if (progress6.classList.contains("right-reveal")){
+            progress6.style.backgroundColor = "green";
+        } else {
+            progress6.style.backgroundColor = "red";
+        }
+    if (progress7.classList.contains("right-reveal")){
+            progress7.style.backgroundColor = "green";
+        } else {
+            progress7.style.backgroundColor = "red";
+        }
+    if (progress8.classList.contains("right-reveal")){
+            progress8.style.backgroundColor = "green";
+        } else {
+            progress8.style.backgroundColor = "red";
+        }
+    if (progress9.classList.contains("right-reveal")){
+            progress9.style.backgroundColor = "green";
+        } else {
+            progress9.style.backgroundColor = "red";
+        }
+    if (progress10.classList.contains("right-reveal")){
+            progress10.style.backgroundColor = "green";
+        } else {
+            progress10.style.backgroundColor = "red";
+        }
+}

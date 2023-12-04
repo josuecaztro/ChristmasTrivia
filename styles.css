@@ -199,3 +199,19 @@ button:hover {
 #name-input::placeholder {
     color:whitesmoke;
 }
+
+.right-reveal {
+    background-color: yellow;
+}
+
+.wrong-reveal {
+    background-color: yellow;
+}
+
+.right-fr {
+    background-color: green;
+}
+
+.wrong-fr {
+    background-color: red;
+}
