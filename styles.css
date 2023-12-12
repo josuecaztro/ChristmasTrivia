@@ -6,7 +6,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(to right, #a02626, #239954);
+    background: linear-gradient(to top, rgb(98, 4, 4), rgb(159, 10, 10));
     color: lightgray;
     gap: 5px;
 }
@@ -15,26 +15,41 @@ h1 {
     font-size: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    color: rgb(255, 58, 58);
+    color: rgb(255, 188, 188);
     text-shadow: 2px 2px rgb(147, 0, 0);
     margin-bottom: 0px;
+    text-shadow: 2px 2px rgb(11, 44, 6);
 }
 
-button {
-    background: linear-gradient(to left, #a02626, #239954);
-    padding: 15px 50px;
-    border: 2px solid lightgreen;
+a {
+    padding: 10px 15px;
     border-radius: 7.5px;
-    box-shadow: 2.5px 2.5px 5px black;
-    color: lightgreen;
+    color:rgb(255, 188, 188);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+    border: 2px rgb(255, 188, 188) groove;
 }
 
-button:hover {
-    background: linear-gradient(to left, #d33333, #30d173);
-    color: rgb(172, 255, 172);
+a:hover {
+    background-color: rgb(255, 188, 188);
+    color: darkred;
     transition: transform 0.2s;
     transform: scale(1.05);
 }
+
+.answer-class {
+    font-size: 15px;
+    font-family:'Arial Narrow Bold', sans-serif;
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.answer-class:hover {
+    background-color: goldenrod;
+    color: yellow;
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
 
 #main-container {
     display: flex;
@@ -45,13 +60,14 @@ button:hover {
 
 #display-container {
     display: flex;
-    background-color: rgb(28, 61, 28);
+    background: url('/Users/josuecastro/Desktop/pexels-george-dolgikh-1303098.jpg') center/cover no-repeat;
     justify-content: center;
     align-items: center;
     border: 10px groove darkred;
     box-shadow: 2.5px 2.5px 5px black;
     padding: 25px;
     gap: 10px;
+    border-radius: 10px;
 }
 
 #santa-clipart {
@@ -69,7 +85,7 @@ button:hover {
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    color: rgb(0, 149, 0);
+    color: rgb(255, 188, 188);
     text-shadow: 2px 2px rgb(11, 44, 6);
 }
 
@@ -82,7 +98,7 @@ button:hover {
     height: auto;
     width: 200px;
     padding: 15px 35px;
-    background-color: rgb(164, 213, 255);
+    background: linear-gradient(to top, rgb(89, 153, 209), rgb(164, 213, 255));
     border-radius: 15px;
     box-shadow: 3px 3px 7.5px black;
     text-align: center;
@@ -109,12 +125,13 @@ button:hover {
     padding: 5px 10px;
     width: 125px;
     text-align: center;
+    user-select: none;
 }
 
 #main-container-two {
     display: flex;
     flex-direction: column;
-    background-color: rgb(28, 61, 28);
+    background: url('/Users/josuecastro/Desktop/pexels-leeloo-thefirst-5782681.jpg') center/cover no-repeat;
     justify-content: center;
     align-items: center;
     border: 10px groove darkred;
@@ -122,6 +139,7 @@ button:hover {
     gap: 10px;
     padding: 10px 25px;
     text-align: center;
+    border-radius: 10px;
 }
 
 #answer-container {
@@ -189,7 +207,7 @@ button:hover {
 
 #name-input {
     display: none;
-    background: linear-gradient(to left, #a02626, #239954);
+    background-color: rgb(100, 21, 21);
     padding: 5px 15px;
     border-radius: 7.5px;
     color: whitesmoke;
@@ -197,7 +215,7 @@ button:hover {
 }
 
 #name-input::placeholder {
-    color:whitesmoke;
+    color:rgb(255, 188, 188);
 }
 
 .right-reveal {
@@ -215,3 +233,4 @@ button:hover {
 .wrong-fr {
     background-color: red;
 }
+

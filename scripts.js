@@ -120,7 +120,8 @@ continueButton.addEventListener("click", ()=>{
         speechBubble.textContent = "I'm Santa! What's your name?";
         nameInput.style.display = "block";
         } else if (clicks === 2){
-            userName = nameInput.value;
+            fakeUserName = nameInput.value;
+            userName = capitalizeName(fakeUserName);
             speechBubble.textContent = `Wow, nice to meet you ${userName}!`;
             nameInput.style.display = "none";
         } else if (clicks === 3){
@@ -420,3 +421,8 @@ function revealFinalProgress(){
             progress10.style.backgroundColor = "red";
         }
 }
+
+
+function capitalizeName (name){
+    return name.charAt(0).toUpperCase() + name.slice(1);
+};
