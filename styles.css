@@ -60,7 +60,7 @@ a:hover {
 
 #display-container {
     display: flex;
-    background: url('/Users/josuecastro/Desktop/pexels-george-dolgikh-1303098.jpg') center/cover no-repeat;
+    background: url('/Users/josuecastro/Desktop/ChristmasTrivia/images/pexels-george-dolgikh-1303098.jpg') center/cover no-repeat;
     justify-content: center;
     align-items: center;
     border: 10px groove darkred;
@@ -131,7 +131,7 @@ a:hover {
 #main-container-two {
     display: flex;
     flex-direction: column;
-    background: url('/Users/josuecastro/Desktop/pexels-leeloo-thefirst-5782681.jpg') center/cover no-repeat;
+    background: url('/Users/josuecastro/Desktop/ChristmasTrivia/images/pexels-leeloo-thefirst-5782681.jpg') center/cover no-repeat;
     justify-content: center;
     align-items: center;
     border: 10px groove darkred;
