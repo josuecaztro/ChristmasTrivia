@@ -426,3 +426,10 @@ function revealFinalProgress(){
 function capitalizeName (name){
     return name.charAt(0).toUpperCase() + name.slice(1);
 };
+
+nameInput.addEventListener("keypress", function(event){
+    if (event.key === "Enter" && clicks === 1){
+        continueButton.click();
+}
+
+});
